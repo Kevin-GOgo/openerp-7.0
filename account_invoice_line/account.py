@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-# © 2016 Elico corp(www.elico-corp.com)
-# Licence AGPL-3.0 or Later(http://www.gnu.org/licenses/agpl.html)
+# © 2014 Elico corp(www.elico-corp.com)
+# Licence AGPL-3.0 or later(http://www.gnu.org/licenses/agpl.html)
 
 from openerp.osv import osv, fields
 from openerp.tools.translate import _
@@ -71,4 +71,4 @@ class account_invoice_line(osv.osv):
                     string='Reference'),
     }
 account_invoice_line()
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
+
