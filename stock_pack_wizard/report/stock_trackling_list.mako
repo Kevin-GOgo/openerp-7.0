@@ -201,49 +201,6 @@ cols=[
 
 
 
-<%doc>
-
-	{'width':"10%",'title':'PACK'},
-	{'width':"40%",'title':' ',
-		'childs':[
-			{'width':"30%",'title':'DESCRIPTION'},
-			{'width':"10%",'title':'UNIT PER PACK'},
-		],  
-	},
-	{'width':"10%",'title':'N.W. (kg)'},
-	{'width':"10%",'title':'G.W. (kg)'},
-	{'width':"10%",'title':'MEASUREMENT'},
-	{'width':"10%",'title':'TOTAL QTY'},
-	{'width':"10%",'title':'CBM'},
-
-<div class="footer">
-	${time.strftime('%Y-%m-%d %H:%M:%S')}
-	<p>${company.partner_id.name}</p>
-</div>
-
-
-<img src="data:image/png;base64,${company.logo}"  class="header"/>
-<hr class="underline" width='100%'/>
-
-
-<p>${company.partner_id.name}</p>
-
-<p>${display_address(company.partner_id)}</p>
-
-%if company.partner_id.phone:
-<p>Phone:  ${company.partner_id.phone}</p>
-%endif 
-%if company.partner_id.phone:
-<p>E-mail:  ${company.partner_id.email}</p>
-%endif 
-
-
-<hr class="underline" width="27%" />
-
-<br/>
-            
-</%doc>
-
 
 
 
