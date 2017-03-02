@@ -1,24 +1,6 @@
 # -*- coding: utf-8 -*-
-##############################################################################
-#
-#    OpenERP, Open Source Management Solution
-#    Copyright (c) 2010-2014 Elico Corp. All Rights Reserved.
-#    Alex Duan <alex.duan@elico-corp.com>
-#
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as
-#    published by the Free Software Foundation, either version 3 of the
-#    License, or (at your option) any later version.
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-#
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#
-##############################################################################
+# © 2014 Elico corp(www.elico-corp.com)
+# Licence AGPL-3.0 or later(http://www.gnu.org/licenses/agpl.html)
 from openerp.osv import orm, osv, fields
 import time
 from openerp.tools.translate import _
@@ -178,10 +160,7 @@ class pos_order(orm.Model):
                 if not grouped_data.get(key, False):
                     grouped_data.setdefault(key, [])
 
-                # if not have_to_group_by or (not grouped_data[key]):
-                #     grouped_data[key].append(values)
-                # else:
-                #     pass
+            
 
                 if have_to_group_by:
                     if not grouped_data[key]:
@@ -457,26 +436,11 @@ class account_invoice_line(osv.osv):
             for i_line in inv.invoice_line:
                 if i_line.product_id and i_line.product_id.valuation == 'real_time':
                     if inv.type in ('out_invoice', 'out_refund'):
-                        # debit account dacc will be the output account
-                        # first check the product, if empty check the category
-                        # Note: we use the stock output account for all customer related.
-                        # include the refund from customer;
                         dacc = i_line.product_id.property_stock_account_output and \
                             i_line.product_id.property_stock_account_output.id
                         if not dacc:
                             dacc = i_line.product_id.categ_id.property_stock_account_output_categ\
                                 and i_line.product_id.categ_id.property_stock_account_output_categ.id
-                    # else:
-                    #     # = out_refund
-                    #     # debit account dacc will be the input account
-                    #     # first check the product, if empty check the category
-                    #     dacc = i_line.product_id.property_stock_account_input\
-                    #         and i_line.product_id.property_stock_account_input.id
-                    #     if not dacc:
-                    #         dacc = i_line.product_id.categ_id.property_stock_account_input_categ\
-                    #             and i_line.product_id.categ_id.property_stock_account_input_categ.id
-                    # in both cases the credit account cacc will be the expense account
-                    # first check the product, if empty check the category
                     cacc = i_line.product_id.property_account_expense and i_line.product_id.property_account_expense.id
                     if not cacc:
                         cacc = i_line.product_id.categ_id.property_account_expense_categ and i_line.product_id.categ_id.property_account_expense_categ.id
@@ -519,20 +483,10 @@ class account_invoice_line(osv.osv):
                             acc = i_line.product_id.categ_id.property_account_creditor_price_difference_categ and i_line.product_id.categ_id.property_account_creditor_price_difference_categ.id
                         a = None
                         if inv.type in ('in_invoice', 'in_refund'):
-                            # oa will be the stock input account
-                            # first check the product, if empty check the category
-                            # Note: we use the stock input account for all the supplier releated invoices.
-                            # include the supplier refund.
                             oa = i_line.product_id.property_stock_account_input and i_line.product_id.property_stock_account_input.id
                             if not oa:
                                 oa = i_line.product_id.categ_id.property_stock_account_input_categ and i_line.product_id.categ_id.property_stock_account_input_categ.id
-                        # else:
-                        #     # = in_refund
-                        #     # oa will be the stock output account
-                        #     # first check the product, if empty check the category
-                        #     oa = i_line.product_id.property_stock_account_output and i_line.product_id.property_stock_account_output.id
-                        #     if not oa:
-                        #         oa = i_line.product_id.categ_id.property_stock_account_output_categ and i_line.product_id.categ_id.property_stock_account_output_categ.id
+                        ck_account_output_categ.id
                         if oa:
                             # get the fiscal position
                             fpos = i_line.invoice_id.fiscal_position or False
