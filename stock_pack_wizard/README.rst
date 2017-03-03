@@ -3,16 +3,29 @@
    :alt: License: AGPL-3
 
 ==================
-product licensor
+Stock Pack Wizard
 ==================
 
-This module adds licensors for the products,
+This module add new functionalities to Pack:
 
-- add a reporting;
+    Split Pack at picking and picking_line
 
-- add a new group: Product licensor manager to manage licensors.
+    New fields added to pack:
+    - Customer Reference: Customer code
+    - Fullname: Customer Code + Sequence
+    - Address: Customer Address
+    - Dimensions: L, W, H, CBM
+    - Weights: NW and GW
 
-- add a new menu: purchase/licensors to view licensors
+    New object created:
+    - Pack Template:
+        - Name and Code
+        - Dimensions: L, W, H, CBM
+        - Weights: NW and GW
+
+    Wizard created: a wizard will let user assign Stock Moves to pack
+    Report created: Packing List (can be printed from Pack Tree view)
+
 
 
 Configuration

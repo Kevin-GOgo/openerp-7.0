@@ -29,7 +29,6 @@
     Report created: Packing List (can be printed from Pack Tree view)
 
     """,
-    # depends on sale_stock to have the field:sale_id from stock.picking model.
     'depends': ['sale_stock', 'report_webkit'],
     'sequence': 10,
     'data': [
