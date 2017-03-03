@@ -2,17 +2,12 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-==================
-product licensor
-==================
+=================================
+Patch of multi-company cost price
+=================================
 
-This module adds licensors for the products,
-
-- add a reporting;
-
-- add a new group: Product licensor manager to manage licensors.
-
-- add a new menu: purchase/licensors to view licensors
+This module fixes:
+Only go through locations belong to own company and create account moves accordingly;
 
 
 Configuration
