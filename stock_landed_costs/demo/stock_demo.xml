@@ -67,27 +67,5 @@
             <field name="landed_cost_type">per_unit</field>
         </record>
 
-        <!-- prepare base stock moves and link to the pickings -->
-        <!-- qty is 10 -->
-<!--         <record id="stock_move_001" model="stock.move">
-            <field name="product_id" ref="product.product_product_39" />
-            <field name="company_id" ref="base.main_company"/>
-            <field name="product_qty" eval="10" />
-            <field name="name" >This move is for testing landed cost and duty rule</field>
-        </record> -->
-        <!-- qty is 20 -->
-<!--         <record id="stock_move_001" model="stock.move">
-            <field name="product_id" ref="product.product_product_38" />
-            <field name="product_qty" eval="20" />
-            <field name="company_id" ref="base.main_company"/>
-            <field name="name" >This move is for testing landed cost and duty rule</field>
-        </record> -->
-
-        <!-- prepare base picking -->
-        <!-- <record id="stock_picking_001" model="stock.picking">
-            <field name="move_type">direct</field>
-            <field name="company_id" ref="base.main_company"/>
-        </record> -->
-
     </data>
 </openerp>

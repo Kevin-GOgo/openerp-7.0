@@ -80,10 +80,6 @@
                 <group string="Localization" position="after">
                     <group name="duty_group" string="Duty Zone Info" attrs="{'invisible': [('usage', 'in', ('customer', 'inventory', 'supplier', 'procurement', 'production', 'transit'))]}" >
                         <field name="duty_zone_id" nolabel="0" />
-                        <!-- <field name="isduty_zone" attrs="{'readonly': [('usage', '&lt;&gt;', 'view')]}"/>
-                        <field name="price_type_id" attrs="{'required': [('isduty_zone', '=', True)], 'invisible': [('isduty_zone', '=', False)], 'readonly': [('usage', '&lt;&gt;', 'view')]}" />
-                        <field name="in_account_id" attrs="{'required': [('isduty_zone', '=', True)], 'readonly': [('usage', '&lt;&gt;', 'view')]}" />
-                        <field name="out_account_id" attrs="{'required': [('isduty_zone', '=', True)], 'readonly': [('usage', '&lt;&gt;', 'view')]}" /> -->
                     </group>
                 </group>
             </field>

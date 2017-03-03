@@ -86,8 +86,6 @@ class pos_order(orm.Model):
 
         period = account_period_obj.find(cr, uid, context=context)[0]
 
-        #session_ids = set(order.session_id for order in self.browse(cr, uid, ids, context=context))
-
         if session and not all(session.id == order.session_id.id for order in self.browse(cr, uid, ids, context=context)):
             raise osv.except_osv(_('Error!'), _('Selected orders do not have the same session!'))
 
@@ -131,12 +129,10 @@ class pos_order(orm.Model):
                 }, context=context)
 
             def insert_data(data_type, values):
-                # if have_to_group_by:
+                
 
                 sale_journal_id = order.sale_journal.id
 
-                # 'quantity': line.qty,
-                # 'product_id': line.product_id.id,
                 values.update({
                     'date': order.date_order[:10],
                     'ref': order.name,
