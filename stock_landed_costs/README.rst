@@ -3,17 +3,14 @@
    :alt: License: AGPL-3
 
 ==================
-product licensor
+stock landed costs
 ==================
 
-This module adds licensors for the products,
+Modification on purchase_landed_costs:
+    * no invoices created for landed cost any more when the po confirmed.
 
-- add a reporting;
-
-- add a new group: Product licensor manager to manage licensors.
-
-- add a new menu: purchase/licensors to view licensors
-
+Limitations:
+    *
 
 Configuration
 =============
