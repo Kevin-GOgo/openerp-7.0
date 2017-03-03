@@ -2,17 +2,12 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-==================
-product licensor
-==================
+==============================
+Patch POS Duplicated Taxes Bug
+==============================
 
-This module adds licensors for the products,
-
-- add a reporting;
-
-- add a new group: Product licensor manager to manage licensors.
-
-- add a new menu: purchase/licensors to view licensors
+This module solves the bug: unbalanced journal items from pos orders.
+ Because the calculation of taxes is messed up with multi companies.
 
 
 Configuration
