@@ -2,18 +2,20 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-==================
-product licensor
-==================
+=========================
+Account Analytic Defaults
+=========================
 
-This module adds licensors for the products,
+Set default values for your analytic accounts.
+==============================================
 
-- add a reporting;
-
-- add a new group: Product licensor manager to manage licensors.
-
-- add a new menu: purchase/licensors to view licensors
-
+Allows to automatically select analytic accounts based on criterions:
+---------------------------------------------------------------------
+    * Product
+    * Partner
+    * User
+    * Company
+    * Date
 
 Configuration
 =============
