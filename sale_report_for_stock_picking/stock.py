@@ -1,24 +1,7 @@
 # -*- coding: utf-8 -*-
-##############################################################################
-#
-#    OpenERP, Open Source Management Solution
-#    Copyright (c) 2010-2013 Elico Corp. All Rights Reserved.
-#    Author: Jon Chow <jon.chow@elico-corp.com>
-#
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as
-#    published by the Free Software Foundation, either version 3 of the
-#    License, or (at your option) any later version.
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-#
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#
-##############################################################################
+# © 2016 Elico corp(www.elico-corp.com)
+# Licence AGPL-3.0 or Later(http://www.gnu.org/licenses/agpl.html)
+
 
 from openerp.osv import fields, osv, orm
 from openerp.tools.translate import _
@@ -48,8 +31,6 @@ class stock_picking(orm.Model):
                                  _("There should be one sale order\
                                   linked to this picking."))
         # check by line before
-        # assert len(sale_ids) == 1,
-        # 'There should be one sale order linked to this picking.'
         datas = {'model': 'sale.order',
                  'ids': sale_ids,
                  'form': sale_pool.read(cr, uid, sale_ids[0], context=context),
@@ -58,5 +39,3 @@ class stock_picking(orm.Model):
                 'report_name': 'sale.order.without.discount',
                 'datas': datas, 'nodestroy': True}
 
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

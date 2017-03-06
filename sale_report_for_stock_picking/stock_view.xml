@@ -14,9 +14,6 @@
     </field>
 </record>
 
-<!--report auto="False" id="report_sale_order_wintout_discount" model="stock.picking" name="sale.order.picking.without.discount" rml="sale_report_for_stock_picking/report/sale_order_without_discount.rml" string="On-Trade Report"
-                usage="default" /-->
-
 
 </data>
 </openerp>
