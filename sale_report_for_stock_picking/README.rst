@@ -8,21 +8,20 @@ Sale Report for Stock Picking
 
  Print Sale Report (On Trader) for Stock Picking
 
-
-Configuration
-=============
-
-To configure this module, you need to:
-
 Bug Tracker
 ===========
 
-Bugs are tracked on `<https://github.com/Elico-Corp/{project_repo}/issues>`_. In case of trouble, please
+Bugs are tracked on `<https://github.com/Elico-Corp/openerp-7.0/pull/113>`_. 
+In case of trouble, please check there if you issue has been already reported.
+if you spotted it first,help us smash it by providing detailed and welcomed 
+feedback.
 
 Contributors
 ------------
 
 Eric Caudal <eric.caudal@elico-corp.com>
+Jon Chow <jon.chow@elico-corp.com>
+LIN Yu <lin.yu@elico-corp.com>
 
 Maintainer
 ----------
