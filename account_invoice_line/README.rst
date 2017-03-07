@@ -6,10 +6,8 @@
 Account Invoice Line
 ====================
 
-Configuration
-=============
+Fine tune Account Invoice Line
 
-To configure this module, you need to:
 
 Bug Tracker
 ===========
