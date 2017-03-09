@@ -1,23 +1,7 @@
 # -*- coding: utf-8 -*-
-##############################################################################
-#
-#    OpenERP, Open Source Management Solution
-#    Copyright (c) 2010-2014 Elico Corp. All Rights Reserved.
-#
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as
-#    published by the Free Software Foundation, either version 3 of the
-#    License, or (at your option) any later version.
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-#
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#
-##############################################################################
+# -*-coding:utf-8-*-
+# © 2014 Elico corp(www.elico-corp.com)
+# Licence AGPL-3.0 or later(http://www.gnu.org/licenses/agpl.html)
 
 from openerp.osv import osv, fields
 import urllib2
@@ -74,10 +58,6 @@ class tradevine_setting(osv.osv):
             "ExternalNotes": "",
             "ProductCategoryID": prod and prod.categ_id and prod.categ_id.name
             or '',
-            # "Weight": self._get_product_value(prod, 'weight'),
-            # "Length": self._get_product_value(prod, 'length'),
-            # "Width": self._get_product_value(prod, 'width'),
-            # "Height": self._get_product_value(prod, 'height'),
             "Currency": "",
             "TaxClassID": "",
             "TaxCode": self._get_tax_code(prod),
@@ -121,17 +101,6 @@ class tradevine_setting(osv.osv):
             'oauth_signature': 'c58c3086-38dc-45e8-ad9f-092cca71818a%2526b67dd513-d5ed-4a18-9a38-ca4560d29ab7'
         }
         return params
-
-    # def show_all_product_from_tradevine(self, cr, uid, context=None):
-    #     url = 'https://api.tradevine.com/v1/Product'
-    #     context = context or {}
-    #     tradevineUrl = self.generate_url(cr, uid, 1, context)
-    #     content = self.access_tradevine_api(cr, uid, tradevineUrl, context)
-    #     result = json.load(content)
-    #     total_count = result["TotalCount"]
-    #     page_size = result["PageSize"]
-    #     page_number = result["PageNumber"]
-    #     print "TotalCount: ", total_count, "PageSize : ", page_size
 
     def sync_tradevine_product_id(self, default_code):
         if not default_code:
@@ -612,12 +581,6 @@ class sale_order(osv.osv):
             partner_shipping_id = customer_id
 
         so_vals = {
-            #TODO shop_id. debfault pricelist is a bug.
-            # 'shop_id': shop_id,
-            # 'warehouse_id': warehouse_id,
-            # 'payment_term': default_payment_term,
-            # 'fiscal_position': default_fiscal_position,
-            # 'order_policy': order_policy,
             'pricelist_id': self._get_default_pricelist(
                 cr, uid, context=context) or False,
             'company_id': company_id,
@@ -807,12 +770,6 @@ class sale_order(osv.osv):
         if not method.journal_id:
             #instead of error just return
             return False
-            # raise osv.except_osv(
-            #     _('Configuration Error'),
-            #     _("An automatic payment should be created for the sale order %s "
-            #       "but the payment method '%s' has no journal defined.") %
-            #     (sale.name, method.name))
-
         journal = method.journal_id
         date = sale.date_order
         if amount is None:
@@ -962,4 +919,3 @@ class account_tax(osv.osv):
         'tradevine_tax_id': fields.char('Tradevine tax id', size=64)
     }
 
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

@@ -1,24 +1,7 @@
 # -*- coding: utf-8 -*-
-##############################################################################
-#
-#    OpenERP, Open Source Management Solution
-#    Copyright (c) 2010-2014 Elico Corp. All Rights Reserved.
-#    Alex Duan <alex.duan@elico-corp.com>
-#
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as
-#    published by the Free Software Foundation, either version 3 of the
-#    License, or (at your option) any later version.
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-#
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#
-##############################################################################
+# -*-coding:utf-8-*-
+# © 2014 Elico corp(www.elico-corp.com)
+# Licence AGPL-3.0 or later(http://www.gnu.org/licenses/agpl.html)
 from openerp.osv import osv, fields
 from hashlib import sha1
 from random import random
@@ -61,10 +44,6 @@ class product_product(osv.osv):
             "ExternalNotes": "",
             "ProductCategoryID": prod and prod.categ_id and prod.categ_id.name
             or '',
-            # "Weight": self._get_product_value(prod, 'weight'),
-            # "Length": self._get_product_value(prod, 'length'),
-            # "Width": self._get_product_value(prod, 'width'),
-            # "Height": self._get_product_value(prod, 'height'),
             "Currency": "",
             "TaxClassID": "",
             "TaxCode": self._get_tax_code(prod),
