@@ -22,6 +22,7 @@ Contributors
 
 * Eric Caudal <eric.caudal@elico-corp.com>
 * Alex Duan <alex.duan@elico-corp.com>
+* Matiar Rahman (matiar.rahman@gmail.com)
 
 Maintainer
 ----------
