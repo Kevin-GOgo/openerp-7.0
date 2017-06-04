@@ -5,7 +5,8 @@
 {
     'name' : 'Trademe Plug-In',
     'version' : '7.0.1.0.0',
-    'author' : 'Matiar Rahman (matiar.rahman@gmail.com)',    
+    'author' : 'Elico Corp',    
+    'website': 'https://www.elico-corp.com',
     'depends' : ['sale'],
     'category': 'Generic Modules/Others',
     'description': """
